@@ -1,0 +1,1 @@
+pip install flask python-dotenv google-cloud-storage google-cloud-bigquery google-cloud-speech==2.26.0 google-cloud-aiplatform google-genai pydantic requests
