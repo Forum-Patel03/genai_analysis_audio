@@ -1,0 +1,133 @@
+/* --- CSS for style2/style2.css (DARK THEME) --- */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #f0f0f0; /* Light text color */
+}
+
+.chat-wrapper {
+    width: 100%;
+    max-width: 600px;
+    background: #242424; /* Dark background for the chat container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* ================================================= */
+/* SCROLLING FIX: CHAT BOX PROPERTIES                */
+/* ================================================= */
+.chat-box {
+    /* Set a maximum height to define the scrollable area */
+    max-height: 500px; 
+    
+    /* CRITICAL: Enable vertical scrolling when content exceeds max-height */
+    overflow-y: auto; 
+    
+    /* Dark background and border for the conversation area */
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Scrollbar styling for a cleaner look */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+.chat-box::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px;
+    background-color: #333; 
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#user-input::placeholder {
+    color: #bbb;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4a90e2; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3a7acb;
+}
+
+/* Message Styling */
+.msg {
+    clear: both; 
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.msg span {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 85%;
+    word-wrap: break-word;
+    font-size: 15px;
+    line-height: 1.4;
+    /* --- CRITICAL FIX FOR LINE BREAKS --- */
+    white-space: pre-wrap; 
+    /* -------------------------------------- */
+}
+
+.user {
+    justify-content: flex-end; 
+}
+
+.user span {
+    background-color: #4a90e2; 
+    color: white;
+    border-bottom-right-radius: 4px; 
+}
+
+.bot {
+    justify-content: flex-start; 
+}
+
+.bot span {
+    background-color: #333333; 
+    color: #f0f0f0;
+    border-bottom-left-radius: 4px; 
+}
